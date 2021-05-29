@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import Products from './Products';
-
+import '../style.css';
+import 'materialize-css/dist/css/materialize.min.css';
+import Dashboard from './Components/Dashboard';
 export default class Dashboard extends Component {
   constructor() {
     super();
@@ -73,7 +75,9 @@ export default class Dashboard extends Component {
       } else return searchFilter();
     };
     return (
-      <div>
+      <div className="container">
+        <h5>Chotu Kart </h5>
+        <title>Chotu Kart </title>
         <Search setValue={setValue} />
         <Products products={filteredArray()} />
       </div>
