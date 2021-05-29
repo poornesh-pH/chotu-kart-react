@@ -6,7 +6,7 @@ export default function Admin(props) {
   console.log(props);
   return (
     <div className="container">
-  Admin
+      <p>Admin</p>
     </div>
   );
 }
