@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Admin from './../Components/Admin';
 import Cart from './../Components/Cart';
 import Customer from './../Components/Customer';
+import Dashboard from './../Components/Dashboard';
+import 
+
 
 export default function AppRouter() {
   <BrowserRouter>
