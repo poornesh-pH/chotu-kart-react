@@ -41,7 +41,7 @@ export default class Dashboard extends Component {
     };
     return (
       <div className="container">
-        {<Search setValue={setValue} />}
+        <Search setValue={setValue} />
         <Products products={filteredArray()} />
       </div>
     );
