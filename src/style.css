@@ -14,3 +14,11 @@
 .container {
   margin: 10%;
 }
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+.logo {
+  margin: 0;
+}

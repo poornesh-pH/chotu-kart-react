@@ -5,11 +5,13 @@ import Cart from './../Components/Cart';
 import Dashboard from './../Components/Dashboard';
 
 export default function AppRouter() {
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Dashboard} />
-      <Route path="/admin" component={Admin} />
-      <Route path="/cart" component={Cart} />
-    </Switch>
-  </BrowserRouter>;
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/admin" component={Admin} />
+        <Route path="/cart" component={Cart} />
+      </Switch>
+    </BrowserRouter>
+  );
 }

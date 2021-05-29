@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
+import '../style.css';
 import Search from './Search';
 import Products from './Products';
-import '../style.css';
-import 'materialize-css/dist/css/materialize.min.css';
 import Dashboard from './Components/Dashboard';
+import { NavLink } from 'react-router-dom';
+
 export default class Dashboard extends Component {
   constructor() {
     super();
@@ -76,8 +78,13 @@ export default class Dashboard extends Component {
     };
     return (
       <div className="container">
-        <h5>Chotu Kart </h5>
         <title>Chotu Kart </title>
+        <div className="navbar">
+          <h5 className="logo">Chotu Kart </h5>
+          <NavLink to="/">Dashboard</NavLink>
+          <NavLink to="/admin">Admin</NavLink>
+          <NavLink to="/cart">Cart</NavLink>
+        </div>
         <Search setValue={setValue} />
         <Products products={filteredArray()} />
       </div>
