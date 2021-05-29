@@ -3,6 +3,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 import '../style.css';
 import Search from './Search';
 import Products from './Products';
+import Admin from './Admin';
 import { products } from '../json';
 
 export default class Dashboard extends Component {
