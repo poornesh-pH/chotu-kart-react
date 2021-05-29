@@ -4,6 +4,7 @@
 .is-active {
   font-size: 17px;
   font-weight: bold;
+  color: #005a8d;
 }
 .heading {
   display: flex;
@@ -19,4 +20,8 @@
 }
 .logo {
   text-align: center;
+  color: #022e57;
+}
+body {
+  background-color: #fff5fd;
 }
