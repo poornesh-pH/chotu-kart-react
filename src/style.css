@@ -1,0 +1,16 @@
+* {
+  font-family: Lato;
+}
+.is-active {
+  font-size: 40px;
+  font-weight: bold;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  /* padding:  0 20%; */
+  padding: 0 3%;
+}
+.container {
+  margin: 10%;
+}
