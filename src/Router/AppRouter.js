@@ -5,6 +5,7 @@ import Cart from './../Components/Cart';
 import Customer from './../Components/Customer';
 import Header from './../Components/Header';
 import Search from './../Components/Search';
+import App from './../App';
 
 export default function AppRouter() {
   return (

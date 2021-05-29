@@ -16,34 +16,35 @@ export default class Customer extends Component {
     };
   }
   render() {
-    console.log(this.props, 'router props');
-    const setValue = e => {
-      if (e && e.target.type == 'checkbox' && e.target.checked) {
-        this.setState({
-          isAvailable: true
-        });
-      } else if (e && e.target.type == 'checkbox' && !e.target.checked) {
-        this.setState({
-          isAvailable: false
-        });
-      } else this.setState({ [e.target.name]: e.target.value });
-    };
+    // // console.log(this.props, 'router props');
+    // const setValue = e => {
+    //   if (e && e.target.type == 'checkbox' && e.target.checked) {
+    //     this.setState({
+    //       isAvailable: true
+    //     });
+    //   } else if (e && e.target.type == 'checkbox' && !e.target.checked) {
+    //     this.setState({
+    //       isAvailable: false
+    //     });
+    //   } else this.setState({ [e.target.name]: e.target.value });
+    // };
 
-    const searchFilter = () => {
-      return this.state.products.filter(product =>
-        product.name.toLowerCase().includes(this.state.searchText.toLowerCase())
-      );
-    };
+    // const searchFilter = () => {
+    //   return this.state.products.filter(product =>
+    //     product.name.toLowerCase().includes(this.state.searchText.toLowerCase())
+    //   );
+    // };
 
-    const filteredArray = () => {
-      if (this.state.isAvailable) {
-        return searchFilter().filter(product => product.stocked);
-      } else return searchFilter();
-    };
+    // const filteredArray = () => {
+    //   if (this.state.isAvailable) {
+    //     return searchFilter().filter(product => product.stocked);
+    //   } else return searchFilter();
+    // };
     return (
       <div className="container">
-        <Search setValue={setValue} />
-        <ProductList products={filteredArray()} />
+        {/* <Search setValue={setValue} /> */}
+        {/* <ProductList products={filteredArray()} /> */}
+        <p>Customer</p>
       </div>
     );
   }
