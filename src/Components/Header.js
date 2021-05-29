@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import ShoppingCartTwoToneIcon from '@material-ui/icons/ShoppingCartTwoTone';
-import BuildIcon from '@material-ui/icons/Build';
-import DashboardIcon from '@material-ui/icons/Dashboard';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Build from '@material-ui/icons/Build';
+import Dashboard from '@material-ui/icons/Dashboard';
 
 export default function Header() {
   return (
@@ -12,13 +12,13 @@ export default function Header() {
 
       <div className="navbar">
         <NavLink exact activeClassName="is-active" to="/">
-          Dashboard <DashboardIcon color="primary" fontSize="small" />
+          Dashboard <Dashboard color="primary" />
         </NavLink>
         <NavLink activeClassName="is-active" to="/admin">
-          Admin <BuildIcon color="primary" fontSize="small" />
+          Admin <Build color="primary" />
         </NavLink>
         <NavLink activeClassName="is-active" to="/cart">
-          Cart <ShoppingCartTwoToneIcon color="primary" fontSize="small" />
+          Cart <ShoppingCartIcon color="primary" />
         </NavLink>
       </div>
     </div>
