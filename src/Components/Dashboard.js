@@ -3,50 +3,13 @@ import 'materialize-css/dist/css/materialize.min.css';
 import '../style.css';
 import Search from './Search';
 import Products from './Products';
-import Header from './Header';
+import {products} from '../json'
 
 export default class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
-      products: [
-        {
-          category: 'Sporting Goods',
-          price: '$49.99',
-          stocked: true,
-          name: 'Football'
-        },
-        {
-          category: 'Sporting Goods',
-          price: '$9.99',
-          stocked: true,
-          name: 'Baseball'
-        },
-        {
-          category: 'Sporting Goods',
-          price: '$29.99',
-          stocked: false,
-          name: 'Basketball'
-        },
-        {
-          category: 'Electronics',
-          price: '$99.99',
-          stocked: true,
-          name: 'iPod Touch'
-        },
-        {
-          category: 'Electronics',
-          price: '$399.99',
-          stocked: false,
-          name: 'iPhone 5'
-        },
-        {
-          category: 'Electronics',
-          price: '$199.99',
-          stocked: true,
-          name: 'Nexus 7'
-        }
-      ],
+      products : products,
       isAvailable: false,
       searchText: ''
     };
