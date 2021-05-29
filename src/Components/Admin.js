@@ -1,12 +1,11 @@
 import React from 'react';
 import Search from './Search';
-import Products from './Products';
 
 export default function Admin(props) {
-  console.log(props);
+  console.log(props,"admin props");
   return (
     <div className="container">
-      <p>Admin</p>
+      <Search products={props.products} />
     </div>
   );
 }

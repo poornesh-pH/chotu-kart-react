@@ -10,7 +10,7 @@ export default function ProductList(props) {
       </div>
       <h6>Shopping Goods</h6>
       <ul className="collection">
-        {props.products.map(product => {
+        {props.filteredProducts.map(product => {
           if (product.category == 'Sporting Goods') {
             return (
               <div key={product.name.toString()}>
@@ -25,7 +25,7 @@ export default function ProductList(props) {
       </ul>
       <h6>Electronics</h6>
       <ul className="collection">
-        {props.products.map(product => {
+        {props.filteredProducts.map(product => {
           if (product.category == 'Electronics') {
             return (
               <div key={product.name.toString()}>
