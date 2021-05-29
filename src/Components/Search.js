@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Search(props) {
   return (
-    <div>
-      <div className="input-field col s6">
+    <div className="search">
+      <div className="input-field col m12">
         <input
           id="last_name"
           type="text"

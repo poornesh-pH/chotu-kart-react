@@ -3,8 +3,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 import '../style.css';
 import Search from './Search';
 import Products from './Products';
-import Dashboard from './Components/Dashboard';
-import { NavLink } from 'react-router-dom';
+import Header from './Header';
 
 export default class Dashboard extends Component {
   constructor() {
@@ -78,13 +77,6 @@ export default class Dashboard extends Component {
     };
     return (
       <div className="container">
-        <title>Chotu Kart </title>
-        <div className="navbar">
-          <h5 className="logo">Chotu Kart </h5>
-          <NavLink to="/">Dashboard</NavLink>
-          <NavLink to="/admin">Admin</NavLink>
-          <NavLink to="/cart">Cart</NavLink>
-        </div>
         <Search setValue={setValue} />
         <Products products={filteredArray()} />
       </div>
