@@ -3,18 +3,19 @@ import 'materialize-css/dist/css/materialize.min.css';
 import '../style.css';
 import Search from './Search';
 import Products from './Products';
-import {products} from '../json'
+import { products } from '../json';
 
 export default class Dashboard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      products : products,
+      products,
       isAvailable: false,
       searchText: ''
     };
   }
   render() {
+    console.log(this.props, 'router props');
     const setValue = e => {
       if (e && e.target.type == 'checkbox' && e.target.checked) {
         this.setState({
@@ -40,7 +41,7 @@ export default class Dashboard extends Component {
     };
     return (
       <div className="container">
-        <Search setValue={setValue} />
+        {<Search setValue={setValue} />}
         <Products products={filteredArray()} />
       </div>
     );
