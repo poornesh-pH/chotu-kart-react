@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import '../style.css';
 import Search from './Search';
-import Products from './Products';
+import ProductList from './ProductList';
 import Admin from './Admin';
 import { products } from '../json';
 
-export default class Dashboard extends Component {
+export default class Customer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,7 +43,7 @@ export default class Dashboard extends Component {
     return (
       <div className="container">
         <Search setValue={setValue} />
-        <Products products={filteredArray()} />
+        <ProductList products={filteredArray()} />
       </div>
     );
   }

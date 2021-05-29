@@ -1,17 +1,16 @@
 import React from 'react';
-
 export default function Search(props) {
   return (
     <div className="search">
-      <div className="input-field col m12">
+      <div className="input-field col s6">
         <input
-          id="last_name"
+          id="searchText"
           type="text"
           className="validate"
           name="searchText"
           onChange={props.setValue}
         />
-        <label htmlFor="last_name">Search</label>
+        <label htmlFor="searchText">Search</label>
       </div>
       <div>
         <p>

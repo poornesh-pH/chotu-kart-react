@@ -4,6 +4,10 @@ export default function ProductList(props) {
   // console.log(props, 'product list props');
   return (
     <div>
+      <div className="heading">
+        <h5>Name</h5>
+        <h5>Price</h5>
+      </div>
       <h6>Shopping Goods</h6>
       <ul className="collection">
         {props.products.map(product => {

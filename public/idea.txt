@@ -1,0 +1,10 @@
+create App.js and maitaing state there
+
+move cutomer and admin to common parent App.js
+
+import both cutomer and admin
+
+send state to both customer and admin
+
+import search and product-list in both customer and admin
+

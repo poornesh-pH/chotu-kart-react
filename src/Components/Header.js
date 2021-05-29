@@ -12,7 +12,7 @@ export default function Header() {
 
       <div className="navbar">
         <NavLink exact activeClassName="is-active" to="/">
-          Dashboard <Dashboard color="primary" />
+          Customer <Dashboard color="primary" />
         </NavLink>
         <NavLink activeClassName="is-active" to="/admin">
           Admin <Build color="primary" />
