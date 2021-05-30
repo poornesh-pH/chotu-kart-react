@@ -7,10 +7,7 @@ import Admin from './Admin';
 import { products } from '../json';
 
 export default class Customer extends Component {
-
   render() {
-    // console.log(this.props, 'router props');
-    
     return (
       <div className="container">
         <Search products={this.props.products} />
