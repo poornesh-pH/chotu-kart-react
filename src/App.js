@@ -23,11 +23,11 @@ export default class App extends Component {
             <Route
               exact
               path="/"
-              render={() => <Customer products={this.state.products} />}
+              render={props => <Customer products={this.state.products} />}
             />
             <Route
               path="/admin"
-              render={() => <Admin products={this.state.products} />}
+              render={props => <Admin products={this.state.products} />}
             />
             <Route path="/cart" component={Cart} />
           </Switch>
