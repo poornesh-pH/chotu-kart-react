@@ -52,8 +52,6 @@ export default class Search extends Component {
             </label>
           </p>
         </div>
-
-
         <ProductList filteredProducts={filteredArray()} />
       </div>
     );
