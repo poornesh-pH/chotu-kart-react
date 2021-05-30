@@ -35,14 +35,17 @@ export default class Search extends Component {
     };
     return (
       <div className="search">
-        <input
-          id="standard-basic"
-          type="text"
-          className="validate"
-          name="searchText"
-          onChange={setValue}
-          label="Search"
-        />
+        <input />
+        <div class="input-field col s6">
+          <input
+            id="searchText"
+            type="text"
+            className="validate"
+            name="searchText"
+            onChange={setValue}
+          />
+          <label for="searchText">Last Name</label>
+        </div>
         <div>
           <p>
             <label>
