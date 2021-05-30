@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ProductList from './ProductList';
+import TextField from '@material-ui/core/TextField';
+
 export default class Search extends Component {
   constructor(props) {
     super(props);
@@ -34,16 +36,14 @@ export default class Search extends Component {
     };
     return (
       <div className="search">
-        <div className="input-field col s6">
-          <input
-            id="searchText"
-            type="text"
-            className="validate"
-            name="searchText"
-            onChange={setValue}
-          />
-          <label htmlFor="searchText">Search</label>
-        </div>
+        <input
+          id="standard-basic"
+          type="text"
+          className="validate"
+          name="searchText"
+          onChange={setValue}
+          label="Search"
+        />
         <div>
           <p>
             <label>
@@ -52,6 +52,8 @@ export default class Search extends Component {
             </label>
           </p>
         </div>
+
+
         <ProductList filteredProducts={filteredArray()} />
       </div>
     );
