@@ -35,7 +35,6 @@ export default class Search extends Component {
     };
     return (
       <div className="search">
-        <input />
         <div class="input-field col s6">
           <input
             id="searchText"
@@ -44,7 +43,7 @@ export default class Search extends Component {
             name="searchText"
             onChange={setValue}
           />
-          <label for="searchText">Last Name</label>
+          <label for="searchText">Search Books</label>
         </div>
         <div>
           <p>

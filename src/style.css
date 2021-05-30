@@ -6,11 +6,6 @@
   font-weight: bold;
   color: #ff96ad;
 }
-.heading {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 3%;
-}
 .container {
   margin-bottom: 10%;
 }
