@@ -4,37 +4,6 @@ export default function ProductList(props) {
   console.log(props, 'product list props');
   return (
     <div>
-      {/* <h6>Shopping Goods</h6> */}
-      {/* <ul classNameName="collection">
-        {props.filteredProducts.map(product => {
-          if (product.category == 'Sporting Goods') {
-            return (
-              <div key={product.name.toString()}>
-                <li classNameName="collection-item">
-                  {product.name}
-                  <div classNameName="secondary-content">{product.price}</div>
-                </li>
-              </div>
-            );
-          }
-        })}
-      </ul>
-      <h6>Electronics</h6>
-      <ul classNameName="collection">
-        {props.filteredProducts.map(product => {
-          if (product.category == 'Electronics') {
-            return (
-              <div key={product.name.toString()}>
-                <li classNameName="collection-item">
-                  {product.name}
-                  <div classNameName="secondary-content">{product.price}</div>
-                  <div><button>add to kart</button> </div>
-                </li>
-              </div>
-            );
-          }
-        })}
-      </ul> */}
       {props.filteredProducts.map(product => {
         return (
           <div key={product.id}>
