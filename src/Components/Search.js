@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProductList from './ProductList';
-export default class Search extends Component{
+export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,17 +21,17 @@ export default class Search extends Component{
       } else this.setState({ [e.target.name]: e.target.value });
     };
 
-    // const searchFilter = () => {
-    //   return this.props.products.filter(product =>
-    //     product.name.toLowerCase().includes(this.state.searchText.toLowerCase())
-    //   );
-    // };
+    const searchFilter = () => {
+      return this.props.products.filter(product =>
+        product.name.toLowerCase().includes(this.state.searchText.toLowerCase())
+      );
+    };
 
-    // const filteredArray = () => {
-    //   if (this.state.isAvailable) {
-    //     return searchFilter().filter(product => product.stocked);
-    //   } else return searchFilter();
-    // };
+    const filteredArray = () => {
+      if (this.state.isAvailable) {
+        return searchFilter().filter(product => product.stocked);
+      } else return searchFilter();
+    };
     return (
       <div className="search">
         <div className="input-field col s6">
@@ -52,7 +52,7 @@ export default class Search extends Component{
             </label>
           </p>
         </div>
-        {/* <ProductList filteredProducts={filteredArray()} /> */}
+        <ProductList filteredProducts={filteredArray()} />
       </div>
     );
   }

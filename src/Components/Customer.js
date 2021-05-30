@@ -13,9 +13,7 @@ export default class Customer extends Component {
     
     return (
       <div className="container">
-        {/* <Search setValue={setValue} /> */}
-        {/* <ProductList products={filteredArray()} /> */}
-        <p>Customer</p>
+        <Search products={this.props.products} />
       </div>
     );
   }
