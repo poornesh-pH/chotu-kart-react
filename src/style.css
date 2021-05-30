@@ -25,3 +25,9 @@
 body {
   background-color: #fff5fd;
 }
+
+.card .card-image img {
+  border: 1px solid #ddd;
+  padding: 10%;
+  width: 150px;
+}
