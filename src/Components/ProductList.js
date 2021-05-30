@@ -1,15 +1,15 @@
 import React from 'react';
 
 export default function ProductList(props) {
-  // console.log(props, 'product list props');
+  console.log(props, 'product list props');
   return (
     <div>
       <div className="heading">
         <h5>Name</h5>
         <h5>Price</h5>
       </div>
-      <h6>Shopping Goods</h6>
-      <ul className="collection">
+      {/* <h6>Shopping Goods</h6> */}
+      {/* <ul className="collection">
         {props.filteredProducts.map(product => {
           if (product.category == 'Sporting Goods') {
             return (
@@ -32,13 +32,13 @@ export default function ProductList(props) {
                 <li className="collection-item">
                   {product.name}
                   <div className="secondary-content">{product.price}</div>
-                  <div>add to cart </div>
+                  <div><button>add to kart</button> </div>
                 </li>
               </div>
             );
           }
         })}
-      </ul>
+      </ul> */}
     </div>
   );
 }

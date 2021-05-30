@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ProductList from './ProductList';
-import TextField from '@material-ui/core/TextField';
 
 export default class Search extends Component {
   constructor(props) {
