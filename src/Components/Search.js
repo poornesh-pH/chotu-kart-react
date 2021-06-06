@@ -35,7 +35,7 @@ export default class Search extends Component {
     };
     return (
       <div className="search">
-        <div class="input-field col s6">
+        <div className="input-field col s6">
           <input
             id="searchText"
             type="text"
