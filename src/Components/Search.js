@@ -43,7 +43,7 @@ export default class Search extends Component {
             name="searchText"
             onChange={setValue}
           />
-          <label for="searchText">Search Books</label>
+          <label htmlFor="searchText">Search Books</label>
         </div>
         <div>
           <p>
