@@ -20,9 +20,7 @@ export default function ProductList(props) {
                     <div className="card-content">
                       <span className="card-title">{product.name}</span>
                       <p>
-                        I am a very simple card. I am good at containing small
-                        bits of information. I am convenient because I require
-                        little markup to use effectively.
+                        {product.description.slice(0,150)+"..."}
                       </p>
                     </div>
                   </div>
