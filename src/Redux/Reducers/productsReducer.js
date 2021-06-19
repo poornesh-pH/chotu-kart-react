@@ -1,6 +1,6 @@
 const productsDefaultvalue = [];
 
-const productsReducer = (state = productsDefaultvalue, action) => {
+export default (state = productsDefaultvalue, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
       return [...state, action.product];
