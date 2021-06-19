@@ -7,7 +7,7 @@ export default function ProductList(props) {
       {props.filteredProducts.map(product => {
         return (
           <div key={product.id}>
-            <div className="col s12 m6">
+            <div className="col s6 m12">
               <div className="row">
                 <div className="col s12 m12">
                   <div className="card">

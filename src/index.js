@@ -4,7 +4,8 @@ import App from './App';
 import 'materialize-css/dist/css/materialize.min.css';
 import configureStore from './Redux/Store/store'
 import {Provider} from 'react-redux';
-import {addProduct} from './Redux/Actions/productsAction'
+import {addProduct,editProduct} from './Redux/Actions/productsAction';
+import AppRouter from './Router/AppRouter';
 const store = configureStore()
 
 const product1 = store.dispatch(
@@ -22,10 +23,24 @@ const product1 = store.dispatch(
     stocked: 0
   })
 );
+const editProduct2 = store.dispatch(
+  editProduct({
+    id: product1.product.id,
+    author: 'Poornesh',
+    category: product1.product.category,
+    description: product1.product.description,
+    img: product1.product.img,
+    inCart: product1.product.inCart,
+    name: product1.product.name,
+    price: product1.product.price,
+    type: 'paperback',
+    stocked: 10
+  })
+);
 const state = store.getState();
 console.log(state)
 const jsx = (
-  <Provider store={store}><App /></Provider>
+  <Provider store={store}><AppRouter /></Provider>
 )
 
 ReactDOM.render(jsx, document.getElementById('root'));

@@ -4,8 +4,9 @@ import Admin from './../Components/Admin';
 import Cart from './../Components/Cart';
 import Customer from './../Components/Customer';
 import Header from './../Components/Header';
-import Search from './../Components/Search';
-import App from './../App';
+import AddBooks from './../Components/AddBooks';
+import EditBooks from './../Components/EditBooks';
+import {BrowserRouter,Switch,Route} from 'react-router-dom'
 
 export default function AppRouter() {
   return (
@@ -15,6 +16,8 @@ export default function AppRouter() {
         <Route exact path="/" component={Customer} />
         <Route path="/admin" component={Admin} />
         <Route path="/cart" component={Cart} />
+        <Route path="/add" component={AddBooks} />
+        <Route exact path="/edit/:id" component={EditBooks}/>
       </Switch>
     </BrowserRouter>
   );

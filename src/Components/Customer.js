@@ -10,7 +10,8 @@ export default class Customer extends Component {
   render() {
     return (
       <div className="container">
-        <Search products={this.props.products} />
+        {/* <Search products={this.props.products} /> */}
+        <p>Customer</p>
       </div>
     );
   }
