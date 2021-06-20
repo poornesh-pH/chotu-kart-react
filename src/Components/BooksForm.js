@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
 
 class BooksForm extends Component {
+  state = {
+    description: '',
+    name: '',
+    price: '',
+    author: '',
+    type: '',
+    img: '',
+    category: '',
+    stocked: ''
+  };
+
   render() {
+    const onFormSubmit = e => {
+      e.preventDefault();
+      this.setState({
+        description : 'something'
+      });
+    };
+    console.log(this.state)
     return (
       <div>
-        <form>
+        <form onSubmit={onFormSubmit}>
           <div className="row">
             <div class="input-field col s6">
               <input id="name" type="text" name="name" class="validate" />
