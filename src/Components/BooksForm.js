@@ -15,8 +15,9 @@ class BooksForm extends Component {
   render() {
     const onFormSubmit = e => {
       e.preventDefault();
+      console.log(e.target.value)
       this.setState({
-        description : 'something'
+        // [e.target.name]: e.target.value
       });
     };
     console.log(this.state)
