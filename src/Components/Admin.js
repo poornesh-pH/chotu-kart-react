@@ -7,8 +7,15 @@ export default function Admin(props) {
   console.log(props, 'admin props');
   return (
     <div className="container">
+      <br />
       {/* <Search products={props.products} /> */}
-      <Link to="/add">Add</Link>
+      <div className="row">
+        <Link to="/add">
+          <button className="btn waves-effect waves-light col s12">
+            Add Books
+          </button>
+        </Link>
+      </div>
       <AdminBookList />
     </div>
   );
