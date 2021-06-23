@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import BooksForm from './BooksForm';
 const EditBooks = props => {
-  // const editBook = props.books.filter(({id})=> id === props.match.params.id)
-  // console.log(editBook,'editBook')
-  console.log(props, 'edit');
+  console.log(props.book,"editbook")
   return (
-    <div>
-      <p>Edit Books</p>
+    <div className="container">
+      <h5>Edit Books</h5>
+      <BooksForm book={props.book} />
     </div>
   );
 };
 
-const mapStateToProps = (state,props) => {
+const mapStateToProps = (state, props) => {
   return {
-    book: state.products.filter(({id})=> id === props.match.params.id)
+    book: state.products.filter(({ id }) => id === props.match.params.id)
   };
 };
 export default connect(mapStateToProps)(EditBooks);
