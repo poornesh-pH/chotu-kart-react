@@ -14,7 +14,11 @@ class BooksForm extends Component {
       stocked: ''
     };
   }
-  onFormSubmit = e => {};
+  onFormSubmit = e => {
+    e.preventDefault();
+    
+
+  };
   handleChange = e => {
     e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
@@ -32,6 +36,7 @@ class BooksForm extends Component {
                 name="name"
                 onChange={this.handleChange}
                 className="validate"
+                required
               />
               <label htmlFor="name">Name</label>
             </div>
@@ -40,6 +45,7 @@ class BooksForm extends Component {
                 id="description"
                 name="description"
                 className="materialize-textarea"
+                required
               />
               <label htmlFor="description">Description</label>
             </div>
@@ -50,6 +56,7 @@ class BooksForm extends Component {
                 name="price"
                 className="validate"
                 min={0}
+                required
               />
               <label htmlFor="price">Price</label>
             </div>
@@ -60,6 +67,7 @@ class BooksForm extends Component {
                 name="stocked"
                 className="validate"
                 min={0}
+                required
               />
               <label htmlFor="stocked">Stocked</label>
             </div>
@@ -71,18 +79,20 @@ class BooksForm extends Component {
                   name="author"
                   type="text"
                   className="validate"
+                  required
                 />
                 <label htmlFor="author">Author</label>
               </div>
+
               <div className="input-field col s6">
-                <input id="type" name="type" type="text" className="validate" />
+                <input id="type" name="type" type="text" className="validate" required/>
                 <label htmlFor="type">Type</label>
               </div>
             </div>
 
             <div className="row">
               <div className="input-field col s6">
-                <input id="img" name="img" type="text" className="validate" />
+                <input id="img" name="img" type="text" className="validate" required/>
                 <label htmlFor="img">Image URL</label>
               </div>
               <div className="input-field col s6">
@@ -91,6 +101,7 @@ class BooksForm extends Component {
                   name="category"
                   type="text"
                   className="validate"
+                  required
                 />
                 <label htmlFor="category">Category</label>
               </div>
