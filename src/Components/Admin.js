@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Search from './Search';
 import AdminBookList from './AdminBookList';
+import { connect } from 'react-redux';
 
-export default function Admin(props) {
+const Admin = props => {
   console.log(props, 'admin props');
   return (
     <div className="container">
@@ -16,7 +17,17 @@ export default function Admin(props) {
           </button>
         </Link>
       </div>
-      <AdminBookList />
+      {props.books.map(book => (
+        <AdminBookList key={book.id} book={book} />
+      ))}
     </div>
   );
-}
+};
+
+const mapStateToProps = state => {
+  return {
+    books: state.products
+  };
+};
+
+export default connect(mapStateToProps)(Admin);
