@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'materialize-css/dist/css/materialize.min.css';
-import configureStore from './Redux/Store/store'
-import {Provider} from 'react-redux';
-import {addProduct,editProduct} from './Redux/Actions/productsAction';
+import configureStore from './Redux/Store/store';
+import { Provider } from 'react-redux';
+import { addProduct, editProduct } from './Redux/Actions/productsAction';
 import AppRouter from './Router/AppRouter';
-const store = configureStore()
+const store = configureStore();
 
 const product1 = store.dispatch(
   addProduct({
@@ -23,7 +23,24 @@ const product1 = store.dispatch(
     stocked: 0
   })
 );
-const editProduct2 = store.dispatch(
+
+const product2 = store.dispatch(
+  addProduct({
+    name: 'Think and Grow Rich',
+    description:
+      "'Think and Grow Rich!' explains entrepreneur Andrew Carnegie’s secret to success, revealed to Napoleon Hill during private interviews with Carnegie, the richest man of his time, and during more than 20 years of research into the lives and philosophies of more than 500 of the most successful people in America. This timeless classic presents a systematic nuts-and-bolts approach to developing the skills and mindset required to achieve exceptional success in any field or endeavor, personal or professional. Hill explains in detail 13 steps required to achieve those goals. The book contains numerous self-tests and checklists.",
+    price: 8.98,
+    author: 'Napoleon Hill',
+    type: 'hardcover',
+    img:
+      'https://images-na.ssl-images-amazon.com/images/I/51ZouHoBGtL._SX315_BO1,204,203,200_.jpg',
+    inCart: false,
+    category: 'business',
+    stocked: 100
+  })
+);
+
+const editProduct1 = store.dispatch(
   editProduct({
     id: product1.product.id,
     author: 'Poornesh',
@@ -38,9 +55,11 @@ const editProduct2 = store.dispatch(
   })
 );
 const state = store.getState();
-console.log(state)
+console.log(state);
 const jsx = (
-  <Provider store={store}><AppRouter /></Provider>
-)
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+);
 
 ReactDOM.render(jsx, document.getElementById('root'));
