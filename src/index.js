@@ -40,20 +40,21 @@ const product2 = store.dispatch(
   })
 );
 
-const editProduct1 = store.dispatch(
-  editProduct({
-    id: product1.product.id,
-    author: 'Poornesh',
-    category: product1.product.category,
-    description: product1.product.description,
-    img: product1.product.img,
-    inCart: product1.product.inCart,
-    name: product1.product.name,
-    price: product1.product.price,
-    type: 'paperback',
-    stocked: 10
-  })
-);
+// const editProduct1 = store.dispatch(
+//   editProduct({
+//     id: product1.product.id,
+//     author: 'Poornesh',
+//     category: product1.product.category,
+//     description: product1.product.description,
+//     img: product1.product.img,
+//     inCart: product1.product.inCart,
+//     name: product1.product.name,
+//     price: product1.product.price,
+//     type: 'paperback',
+//     stocked: 10
+//   })
+// );
+store.subscribe(()=>console.log(store.getState(),"subscribed"))
 const state = store.getState();
 console.log(state);
 const jsx = (

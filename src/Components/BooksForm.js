@@ -16,6 +16,7 @@ class BooksForm extends Component {
   }
   onFormSubmit = e => {
     e.preventDefault();
+    this.props.onSubmit(this.state)
   };
   handleChange = e => {
     e.preventDefault();
@@ -23,7 +24,7 @@ class BooksForm extends Component {
   };
 
   render() {
-    console.log(this.props, 'book');
+    console.log(this.props, 'booksform');
     return (
       <div>
         {/* {this.props.book.description} */}

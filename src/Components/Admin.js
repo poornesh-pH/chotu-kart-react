@@ -5,7 +5,7 @@ import AdminBookList from './AdminBookList';
 import { connect } from 'react-redux';
 
 const Admin = props => {
-  console.log(props, 'admin props');
+  // console.log(props, 'admin props');
   return (
     <div className="container">
       <br />
