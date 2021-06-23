@@ -26,6 +26,7 @@ class BooksForm extends Component {
     console.log(this.props, 'book');
     return (
       <div>
+      {/* {this.props.book.description} */}
         <form onSubmit={this.onFormSubmit}>
           <div className="row">
             <div className="input-field col s6">

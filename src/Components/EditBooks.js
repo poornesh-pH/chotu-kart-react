@@ -13,7 +13,7 @@ const EditBooks = props => {
 
 const mapStateToProps = (state, props) => {
   return {
-    book: state.products.filter(({ id }) => id === props.match.params.id)
+    book: state.products.filter(({ id }) => id === props.match.params.id)[0]
   };
 };
 export default connect(mapStateToProps)(EditBooks);
