@@ -26,3 +26,7 @@ body {
   padding: 10%;
   width: 150px;
 }
+.adminBookList{
+  display: flex;
+  justify-content: space-between;
+}
