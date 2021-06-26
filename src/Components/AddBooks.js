@@ -1,11 +1,16 @@
 import React from 'react';
 import BooksForm from './BooksForm';
-const AddBooks = ()=>{
+import {connect} from 'react-redux';
+import {addProduct} from '../Redux/Actions/productsAction';
+const AddBooks = (props)=>{
   return(
     <div className="container">
     <h5>Add Books</h5>
-    <BooksForm />
+    <BooksForm onSubmit={(newBook)=>{
+      props.dispatch(addProduct(newBook))
+      props.history.push('/admin')
+    }}/>
     </div>
   )
 }
-export default AddBooks
+export default connect()(AddBooks)
