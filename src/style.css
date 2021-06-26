@@ -30,3 +30,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.btn-small{
+  max-height: 10%;
+}
