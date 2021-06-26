@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import BooksForm from './BooksForm';
 import {editProduct} from '../Redux/Actions/productsAction';
 const EditBooks = props => {
-  // console.log(props.book,"editbook")
+  console.log(props.book.id,"editbookid")
   return (
     <div className="container">
       <h5>Edit Books</h5>
       <BooksForm onSubmit={(editedBook)=>{
         console.log(editedBook,"editedBook")
-       props.dispatch(editProduct(editedBook),
+       props.dispatch(editProduct({id:props.book.id,...editedBook}),
        console.log("book edited"),
        props.history.push('/admin'))
       }}book={props.book} />
