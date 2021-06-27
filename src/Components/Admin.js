@@ -10,6 +10,10 @@ const Admin = props => {
     <div className="container">
       <br />
       {/* <Search products={props.products} /> */}
+
+      {props.books.map(book => (
+        <AdminBookList key={book.id} book={book} />
+      ))}<hr/>
       <div className="row">
         <Link to="/add">
           <button className="btn waves-effect waves-light col s12">
@@ -17,9 +21,6 @@ const Admin = props => {
           </button>
         </Link>
       </div>
-      {props.books.map(book => (
-        <AdminBookList key={book.id} book={book} />
-      ))}
     </div>
   );
 };
