@@ -5,7 +5,7 @@ const BooksCards = props =>
   {
     return (
       <div className="row">
-        <div classNameName="col m6">
+        <div classNameName="col s8 m6"> {/* change orientation */}
           {props.books.map(item => (
             <div className="card">
               <div className="card-image waves-effect waves-block waves-light">
