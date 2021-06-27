@@ -6,6 +6,7 @@ import configureStore from './Redux/Store/store';
 import { Provider } from 'react-redux';
 import { addProduct, editProduct } from './Redux/Actions/productsAction';
 import AppRouter from './Router/AppRouter';
+import {addToCart,removeFromCart} from './Redux/Actions/cartAction';
 const store = configureStore();
 
 const product1 = store.dispatch(
@@ -40,6 +41,7 @@ const product2 = store.dispatch(
   })
 );
 
+
 // const editProduct1 = store.dispatch(
 //   editProduct({
 //     id: product1.product.id,
@@ -57,6 +59,9 @@ const product2 = store.dispatch(
 store.subscribe(()=>console.log(store.getState(),"subscribed"))
 const state = store.getState();
 console.log(state);
+let id;
+store.dispatch(addToCart(13))
+store .dispatch(removeFromCart(13))
 const jsx = (
   <Provider store={store}>
     <AppRouter />
