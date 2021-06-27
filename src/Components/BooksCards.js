@@ -2,22 +2,22 @@ import React from 'react';
 
 const BooksCards = () => (
   <div className="row">
-    <div className="col s12 m6">
-      <div class="card">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/office.jpg" />
+    <div classNameName="col s12 m6">
+      <div className="card">
+        <div className="card-image waves-effect waves-block waves-light">
+          <img className="activator" src="images/office.jpg" />
         </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">
-            Card Title<i class="material-icons right">more_vert</i>
+        <div className="card-content">
+          <span className="card-title activator grey-text text-darken-4">
+            Card Title<i className="material-icons right">more_vert</i>
           </span>
           <p>
             <a href="#">This is a link</a>
           </p>
         </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">
-            Card Title<i class="material-icons right">close</i>
+        <div className="card-reveal">
+          <span className="card-title grey-text text-darken-4">
+            Card Title<i className="material-icons right">close</i>
           </span>
           <p>
             Here is some more information about this product that is only
