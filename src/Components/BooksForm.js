@@ -26,11 +26,11 @@ class BooksForm extends Component {
   render() {
     console.log(this.props, 'booksform');
     return (
-      <div>
+      <div className="container">
         {/* {this.props.book.description} */}
         <form onSubmit={this.onFormSubmit}>
           <div className="row">
-            <div className="input-field col s6">
+            <div className="input-field col s12 m6">
               <input
                 //  placeholder="Name"
                 id="name"
@@ -43,7 +43,7 @@ class BooksForm extends Component {
               />
               <label htmlFor="name">Name</label>
             </div>
-            <div className="input-field col s6">
+            <div className="input-field col s12 m6">
               <textarea
                 id="description"
                 name="description"
@@ -54,7 +54,7 @@ class BooksForm extends Component {
               />
               <label htmlFor="description">Description</label>
             </div>
-            <div className="input-field col s6">
+            <div className="input-field col s12 m6">
               <input
                 id="price"
                 type="number"
@@ -67,7 +67,7 @@ class BooksForm extends Component {
               />
               <label htmlFor="price">Price</label>
             </div>
-            <div className="input-field col s6">
+            <div className="input-field col s12 m6">
               <input
                 id="stocked"
                 type="number"
@@ -82,7 +82,7 @@ class BooksForm extends Component {
             </div>
 
             <div className="row">
-              <div className="input-field col s6">
+              <div className="input-field col s12 m6">
                 <input
                   id="author"
                   name="author"
@@ -95,7 +95,7 @@ class BooksForm extends Component {
                 <label htmlFor="author">Author</label>
               </div>
 
-              <div className="input-field col s6">
+              <div className="input-field col s12 m6">
                 <input
                   id="type"
                   name="type"
@@ -110,7 +110,7 @@ class BooksForm extends Component {
             </div>
 
             <div className="row">
-              <div className="input-field col s6">
+              <div className="input-field col s12 m6">
                 <input
                   id="img"
                   name="img"
@@ -122,7 +122,7 @@ class BooksForm extends Component {
                 />
                 <label htmlFor="img">Image URL</label>
               </div>
-              <div className="input-field col s6">
+              <div className="input-field col s12 m6">
                 <input
                   id="category"
                   name="category"
