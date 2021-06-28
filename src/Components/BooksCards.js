@@ -7,8 +7,8 @@ const BooksCards = props =>
       <div className="row card-container">
         {/* change orientation */}
         {props.books.map(item => (
-          <div className="col l4 s12 m6">
-            <div className="card" key={item.id}>
+          <div className="col l4 s12 m6"key={item.id}>
+            <div className="card">
               <div className="card-image waves-effect waves-block waves-light">
                 <img className="activator" src={item.img} />
               </div>
