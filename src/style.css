@@ -25,11 +25,12 @@ body {
   border: 1px solid #ddd;
   padding: 10%;
   width: 150px;
+  height: 400px;
 }
-.adminBookList{
+.adminBookList {
   display: flex;
   justify-content: space-evenly;
 }
-.btn-small{
+.btn-small {
   max-height: 10%;
 }

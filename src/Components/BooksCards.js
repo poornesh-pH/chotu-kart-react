@@ -4,11 +4,10 @@ const BooksCards = props =>
   // console.log(props, 'customer props'),
   {
     return (
-      <div className="row">
-        <div className="col s12 m6">
-          {' '}
-          {/* change orientation */}
-          {props.books.map(item => (
+      <div className="row card-container">
+        {/* change orientation */}
+        {props.books.map(item => (
+          <div className="col l4 s12 m6">
             <div className="card" key={item.id}>
               <div className="card-image waves-effect waves-block waves-light">
                 <img className="activator" src={item.img} />
@@ -30,8 +29,8 @@ const BooksCards = props =>
                 <p>{item.description}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     );
 
