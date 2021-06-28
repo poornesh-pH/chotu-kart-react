@@ -25,7 +25,7 @@ body {
   border: 1px solid #ddd;
   padding: 10%;
   width: 150px;
-  height: 400px;
+  height: 350px;
 }
 .adminBookList {
   display: flex;
@@ -33,4 +33,7 @@ body {
 }
 .btn-small {
   max-height: 10%;
+}
+.card .card-content{
+  
 }
