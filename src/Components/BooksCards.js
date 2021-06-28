@@ -5,15 +5,18 @@ const BooksCards = props =>
   {
     return (
       <div className="row">
-        <div classNameName="col s8 m6"> {/* change orientation */}
+        <div className="col s12 m6">
+          {' '}
+          {/* change orientation */}
           {props.books.map(item => (
-            <div className="card">
+            <div className="card" key={item.id}>
               <div className="card-image waves-effect waves-block waves-light">
                 <img className="activator" src={item.img} />
               </div>
               <div className="card-content">
                 <span className="card-title activator grey-text text-darken-4">
-                  {item.name}<i className="material-icons right">more_vert</i>
+                  {item.name}
+                  <i className="material-icons right">more_vert</i>
                 </span>
                 <p>
                   <a href="#">This is a link</a>
@@ -21,11 +24,10 @@ const BooksCards = props =>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">
-                 {item.name}<i className="material-icons right">close</i>
+                  {item.name}
+                  <i className="material-icons right">close</i>
                 </span>
-                <p>
-                 {item.description}
-                </p>
+                <p>{item.description}</p>
               </div>
             </div>
           ))}
