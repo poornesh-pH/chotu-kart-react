@@ -24,8 +24,8 @@ body {
 .card .card-image img {
   border: 1px solid #ddd;
   padding: 10%;
-  width: 150px;
-  height: 350px;
+  width: 100px;
+  height: 300px;
 }
 .adminBookList {
   display: flex;
@@ -35,6 +35,6 @@ body {
   max-height: 10%;
 }
 .card .card-content {
-    padding: 16px;
-    border-radius: 0 0 2px 2px;
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
 }
