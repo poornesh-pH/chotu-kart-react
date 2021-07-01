@@ -9,7 +9,8 @@ export const addProduct = ({
   type = '',
   img = '',
   stocked = null,
-  category = ''
+  category = '',
+  inCart = false
 } = {}) => {
   return {
     type: 'ADD_PRODUCT',
@@ -22,7 +23,8 @@ export const addProduct = ({
       type,
       img,
       stocked,
-      category
+      category,
+      inCart
     }
   };
 };
@@ -44,8 +46,10 @@ export const editProduct = ({
   type,
   img,
   stocked,
-  category
+  category,
+  inCart
 }) => {
+  console.log("editProduct action", inCart,id)
   return {
     type: 'EDIT_PRODUCT',
     product: {
@@ -57,7 +61,8 @@ export const editProduct = ({
       type,
       img,
       stocked,
-      category
+      category,
+      inCart
     }
   };
 };
