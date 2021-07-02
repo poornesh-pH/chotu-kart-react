@@ -7,7 +7,7 @@ const BooksCards = props => {
     props.dispatch(addToCart(item));
     props.dispatch(editProduct({ id: item.id, ...item, inCart: true }));
   };
-  const handleRemoveFromCart = item =>{
+const handleRemoveFromCart = item =>{
     props.dispatch(removeFromCart(item))
     props.dispatch(editProduct({ id: item.id, ...item, inCart: false }));
   }

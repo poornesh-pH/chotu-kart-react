@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {handleRemoveFromCart} from './BooksCards'
 function Cart({ itemsInCart }) {
   return (
     <div className="container">
       {itemsInCart.map(item => (
         <div className="itemsInCart">
           <p>{item.name}</p>
-          <a className="cartRemoveItem">Remove</a>
+          {/* <a className="cartRemoveItem" onClick={()=>handleRemoveFromCart(item)}>Remove</a> */}
         </div>
       ))}
     </div>
