@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addToCart,removeFromCart } from '../Redux/Actions/cartAction';
+import { addToCart, removeFromCart } from '../Redux/Actions/cartAction';
 import { editProduct } from '../Redux/Actions/productsAction';
 const BooksCards = props => {
   const handleAddToCart = item => {
     props.dispatch(addToCart(item));
     props.dispatch(editProduct({ id: item.id, ...item, inCart: true }));
   };
-const handleRemoveFromCart = item =>{
-    props.dispatch(removeFromCart(item))
+  const handleRemoveFromCart = item => {
+    props.dispatch(removeFromCart(item));
     props.dispatch(editProduct({ id: item.id, ...item, inCart: false }));
-  }
+  };
   return (
     <div className="row card-container">
       {/* change orientation */}
@@ -25,17 +25,18 @@ const handleRemoveFromCart = item =>{
                 {item.name}
                 <i className="material-icons right">more_vert</i>
               </span>
-              <p>
-                {item.inCart ? (
-                  <a onClick={() => handleRemoveFromCart(item)}>
-                    Remove from Cart
-                  </a>
-                ) : (
-                  <a onClick={() => handleAddToCart(item)}>
-                    Add to Cart
-                  </a>
-                )}
-              </p>
+              <div className="some">
+                <p>
+                  {item.inCart ? (
+                    <a onClick={() => handleRemoveFromCart(item)}>
+                      Remove from Cart
+                    </a>
+                  ) : (
+                    <a onClick={() => handleAddToCart(item)}>Add to Cart</a>
+                  )}
+                </p>
+                <p>Price : {item.price}</p>
+              </div>
             </div>
             <div className="card-reveal">
               <span className="card-title grey-text text-darken-4">
@@ -56,4 +57,3 @@ const mapStateToProps = state => {
   };
 };
 export default connect(mapStateToProps)(BooksCards);
-
