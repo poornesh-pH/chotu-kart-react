@@ -1,19 +1,29 @@
 import React from 'react';
-import {connect} from 'react-redux';
-function Cart(props) {
-  console.log(props,"Cart Component")
+import { connect } from 'react-redux';
+function Cart({ itemsInCart }) {
   return (
     <div className="container">
-      <h6>Cart</h6>
+      {itemsInCart.map(item => (
+        <div className="itemsInCart">
+          <p>{item.name}</p>
+          <a className="cartRemoveItem">Remove</a>
+        </div>
+      ))}
     </div>
   );
 }
-const filterProductsToCart = (products,cart) =>{
-return products.find((item)=>item.id === cart.id)
-}
-const mapStateToProps =(state)=>{
-  return{
-    itemsInCart : filterProductsToCart(state.products,state.cart)
+const filterProductsToCart = (products, cart) => {
+  let filtered = [];
+  for (let i = 0; i < cart.length; i++) {
+    for (let j = 0; j < products.length; j++) {
+      if (cart[i] == products[j].id) filtered.push(products[j]);
+    }
   }
-}
+  return filtered;
+};
+const mapStateToProps = state => {
+  return {
+    itemsInCart: filterProductsToCart(state.products, state.cart)
+  };
+};
 export default connect(mapStateToProps)(Cart);
