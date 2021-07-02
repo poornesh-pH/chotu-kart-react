@@ -10,8 +10,8 @@ function Cart({ itemsInCart, dispatch }) {
   };
   return (
     <div className="container">
-      {itemsInCart.map(item => (
-        <div className="itemsInCart">
+      {itemsInCart.length <= 0 ? <p>No Items in Cart</p> : itemsInCart.map(item => (
+        <div className="itemsInCart" key={item.id}>
           <p>{item.name}</p>
           <a className="cartRemoveItem" onClick={() => removingFromCart(item)}>
             Remove
