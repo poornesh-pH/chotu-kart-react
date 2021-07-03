@@ -29,7 +29,7 @@ body {
 }
 .adminBookList, .itemsInCart,.some{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .btn-small {
   max-height: 10%;
@@ -40,4 +40,8 @@ body {
 }
 .cartRemoveItem{
   padding-top: 4%;
+}
+.countButton{
+    margin-bottom: 20px;
+    margin-top: 15px
 }

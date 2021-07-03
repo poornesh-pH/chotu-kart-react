@@ -10,14 +10,23 @@ function Cart({ itemsInCart, dispatch }) {
   };
   return (
     <div className="container">
-      {itemsInCart.length <= 0 ? <p>No Items in Cart</p> : itemsInCart.map(item => (
-        <div className="itemsInCart" key={item.id}>
-          <p>{item.name}</p>
-          <a className="cartRemoveItem" onClick={() => removingFromCart(item)}>
-            Remove
-          </a>
-        </div>
-      ))}
+      {itemsInCart.length <= 0 ? (
+        <p>No Items in Cart</p>
+      ) : (
+        itemsInCart.map(item => (
+          <div className="itemsInCart" key={item.id}>
+            <p>{item.name}</p>
+            <button className="countButton">-</button><p>{0}</p>
+            <button className="countButton">+</button>
+            <a
+              className="cartRemoveItem"
+              onClick={() => removingFromCart(item)}
+            >
+              Remove
+            </a>
+          </div>
+        ))
+      )}
     </div>
   );
 }
