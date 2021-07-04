@@ -35,7 +35,7 @@ const BooksCards = props => {
                     <a onClick={() => handleAddToCart(item)}>Add to Cart</a>
                   )}
                 </p>
-                <p>Price : {item.price}</p>
+                <p>Price : {'₹' +" " +item.price}</p>
               </div>
             </div>
             <div className="card-reveal">

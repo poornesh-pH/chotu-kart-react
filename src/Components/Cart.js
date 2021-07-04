@@ -42,7 +42,7 @@ function Cart({ itemsInCart, dispatch }) {
             >
               +
             </button>
-            <p>{(item.price * item.count).toFixed(2)}</p>
+            <p>{'₹' +" " + (item.price * item.count).toFixed(2)}</p>
             <a
               className="cartRemoveItem"
               onClick={() => removingFromCart(item)}
@@ -52,7 +52,7 @@ function Cart({ itemsInCart, dispatch }) {
           </div>
         ))
       )}
-      <button className="btn-small">Buy Now</button>
+      {itemsInCart.length > 0 && <button className="btn-small">Buy Now</button>}
     </div>
   );
 }
