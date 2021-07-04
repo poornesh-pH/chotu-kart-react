@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeFromCart, editCart } from '../Redux/Actions/cartAction';
 import { editProduct } from '../Redux/Actions/productsAction';
-
+import { Link } from 'react-router-dom';
 function Cart({ itemsInCart, dispatch }) {
   const removingFromCart = item => {
     dispatch(removeFromCart(item.id));
-    dispatch(editProduct({ id: item.id, ...item, inCart: false}));
+    dispatch(editProduct({ id: item.id, ...item, inCart: false }));
   };
   const itemCounter = (id, count) => {
     itemsInCart.map(item => {
@@ -29,7 +29,7 @@ function Cart({ itemsInCart, dispatch }) {
               onClick={() => {
                 itemCounter(item.id, -1);
               }}
-              disabled = {item.count == 1}
+              disabled={item.count == 1}
             >
               -
             </button>
@@ -42,7 +42,7 @@ function Cart({ itemsInCart, dispatch }) {
             >
               +
             </button>
-            <p>{'₹' +" " + (item.price * item.count).toFixed(2)}</p>
+            <p>{'₹' + ' ' + (item.price * item.count).toFixed(2)}</p>
             <a
               className="cartRemoveItem"
               onClick={() => removingFromCart(item)}
@@ -52,7 +52,11 @@ function Cart({ itemsInCart, dispatch }) {
           </div>
         ))
       )}
-      {itemsInCart.length > 0 && <button className="btn-small">Buy Now</button>}
+      {itemsInCart.length > 0 && (
+        <Link to="/shipping">
+          <button className="btn-small">Buy Now</button>
+        </Link>
+      )}
     </div>
   );
 }
@@ -63,7 +67,7 @@ const filterProductsToCart = (products, cart) => {
       if (cart[i].id == products[j].id)
         filtered.push({
           ...products[j],
-          count: cart[i].count,
+          count: cart[i].count
         });
     }
   }

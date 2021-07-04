@@ -6,6 +6,7 @@ import Customer from './../Components/Customer';
 import Header from './../Components/Header';
 import AddBooks from './../Components/AddBooks';
 import EditBooks from './../Components/EditBooks';
+import Shipping from './../Components/Shipping';
 import {BrowserRouter,Switch,Route} from 'react-router-dom'
 
 export default function AppRouter() {
@@ -18,6 +19,7 @@ export default function AppRouter() {
         <Route path="/cart" component={Cart} />
         <Route path="/add" component={AddBooks} />
         <Route exact path="/edit/:id" component={EditBooks}/>
+        <Route path="/shipping" component={Shipping}/>
       </Switch>
     </BrowserRouter>
   );
