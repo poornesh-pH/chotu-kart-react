@@ -41,7 +41,12 @@ const filterProductsToCart = (products, cart) => {
   let filtered = [];
   for (let i = 0; i < cart.length; i++) {
     for (let j = 0; j < products.length; j++) {
-      if (cart[i].id == products[j].id) filtered.push(products[j]);
+      if (cart[i].id == products[j].id) 
+      filtered.push({
+        name: products[j].name,
+        price: products[j].price,
+        count: cart[i].count
+      });
     }
   }
   return filtered;
