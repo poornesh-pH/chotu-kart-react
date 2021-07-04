@@ -49,7 +49,6 @@ export const editProduct = ({
   category,
   inCart
 }) => {
-  console.log("editProduct action", inCart,id)
   return {
     type: 'EDIT_PRODUCT',
     product: {

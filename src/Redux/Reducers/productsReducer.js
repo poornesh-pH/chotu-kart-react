@@ -8,7 +8,6 @@ export default (state = productsDefaultvalue, action) => {
       return state.filter(product => product.id !== action.id);
     case 'EDIT_PRODUCT':
       return state.map(product => {
-        console.log(action)
         if (product.id === action.product.id) {
           return {
             ...action.product

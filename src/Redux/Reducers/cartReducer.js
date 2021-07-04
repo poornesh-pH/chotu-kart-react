@@ -1,7 +1,6 @@
 const defaultCart = [];
 
 export default (state = defaultCart, action) => {
-  // console.log(action,"remove cart check")
   switch (action.type) {
     case 'ADD_TO_CART':
       return [...state, action.item];
