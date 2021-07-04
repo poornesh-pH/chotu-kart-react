@@ -5,10 +5,10 @@ export default (state = defaultCart, action) => {
     case 'ADD_TO_CART':
       return [...state, action.item];
     case 'EDIT_CART':
-      return state.map((item)=>{
-        if(item.id == action.id){
-          count = action.count
-        }
+      return state.map((i)=>{
+       if(i.id == action.item.id){
+        return {...action.item}
+       }
       })
     case 'REMOVE_FROM_CART':
       return state.filter(item => item.id !== action.id);

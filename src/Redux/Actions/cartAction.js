@@ -16,7 +16,7 @@ export const editCart = (id, count) => {
     }
   };
 };
-export const removeFromCart = (id) => {
+export const removeFromCart = id => {
   return {
     type: 'REMOVE_FROM_CART',
     id
