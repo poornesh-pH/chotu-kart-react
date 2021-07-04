@@ -5,9 +5,15 @@ import { editProduct } from '../Redux/Actions/productsAction';
 
 function Cart({ itemsInCart, dispatch }) {
   const removingFromCart = item => {
-    dispatch(removeFromCart(item));
+    dispatch(removeFromCart(item.id));
     dispatch(editProduct({ id: item.id, ...item, inCart: false }));
   };
+  const itemCounter =(id,count)=>{
+    itemsInCart.map((item)=>{
+      if(item.id == id)
+      item.count = item.count + count;
+    })
+  }
   return (
     <div className="container">
       {itemsInCart.length <= 0 ? (
@@ -16,8 +22,8 @@ function Cart({ itemsInCart, dispatch }) {
         itemsInCart.map(item => (
           <div className="itemsInCart" key={item.id}>
             <p>{item.name}</p>
-            <button className="countButton">-</button><p>{0}</p>
-            <button className="countButton">+</button>
+            <button className="countButton" onClick={()=>{itemCounter(item.id,-1)}}>-</button><p>{item.count}</p>
+            <button className="countButton" onClick={()=>{itemCounter(item.id,1)}}>+</button>
             <a
               className="cartRemoveItem"
               onClick={() => removingFromCart(item)}
@@ -27,6 +33,7 @@ function Cart({ itemsInCart, dispatch }) {
           </div>
         ))
       )}
+      <button className="btn-small">Buy Now</button>
     </div>
   );
 }
@@ -34,7 +41,7 @@ const filterProductsToCart = (products, cart) => {
   let filtered = [];
   for (let i = 0; i < cart.length; i++) {
     for (let j = 0; j < products.length; j++) {
-      if (cart[i] == products[j].id) filtered.push(products[j]);
+      if (cart[i].id == products[j].id) filtered.push(products[j]);
     }
   }
   return filtered;

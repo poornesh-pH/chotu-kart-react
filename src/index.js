@@ -59,9 +59,6 @@ const product2 = store.dispatch(
 store.subscribe(()=>console.log(store.getState(),"subscribed"))
 const state = store.getState();
 console.log(state);
-let id;
-store.dispatch(addToCart(13))
-store .dispatch(removeFromCart(13))
 const jsx = (
   <Provider store={store}>
     <AppRouter />
