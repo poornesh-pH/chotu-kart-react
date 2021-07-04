@@ -7,7 +7,7 @@ export const addToCart = ({ id }) => {
     }
   };
 };
-export const editCart = ({ id, count }) => {
+export const editCart = (id, count) => {
   return {
     type: 'EDIT_CART',
     item: {

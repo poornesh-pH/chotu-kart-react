@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { removeFromCart } from '../Redux/Actions/cartAction';
+import { removeFromCart,editCart } from '../Redux/Actions/cartAction';
 import { editProduct } from '../Redux/Actions/productsAction';
 
 function Cart({ itemsInCart, dispatch }) {
@@ -9,9 +9,12 @@ function Cart({ itemsInCart, dispatch }) {
     dispatch(editProduct({ id: item.id, ...item, inCart: false }));
   };
   const itemCounter =(id,count)=>{
+    console.log(id,count)
     itemsInCart.map((item)=>{
-      if(item.id == id)
-      item.count = item.count + count;
+      if(item.id == id){
+      let itemCount = item.count + count
+      dispatch(editCart(id,itemCount))
+      }
     })
   }
   return (
@@ -43,6 +46,7 @@ const filterProductsToCart = (products, cart) => {
     for (let j = 0; j < products.length; j++) {
       if (cart[i].id == products[j].id) 
       filtered.push({
+        id: products[j].id,
         name: products[j].name,
         price: products[j].price,
         count: cart[i].count
